@@ -40,36 +40,54 @@ Agora vamos adicionar algumas funcionalidades, primeiro exibir uma mensagem para
 - No **index.html**
 ```
     <div id="estaConectado" class="col-12 text-center estaConectado">
-      <legend>Você está conectado <i class="fa fa-check text-success" aria-hidden="true"></i></legend>
+        <legend>Você está conectado <i class="fa fa-check text-success" aria-hidden="true"></i></legend>
     </div>
 ```
 - No **index.js**
 ```
-	document.getElementById('estaConectado').style.display = 'none';
+     document.getElementById('estaConectado').style.display = 'none';
+	
 . . . 
-document.getElementById('connect').addEventListener('click', function () {
 
-	var otherId = JSON.parse(document.getElementById('otherId').value);
-	peer.signal(otherId);
+     document.getElementById('connect').addEventListener('click', function () {
 
-	connected();
+	  var otherId = JSON.parse(document.getElementById('otherId').value);
+	  peer.signal(otherId);
 
-})
+	  connected();
+
+     })
+
 . . .
-function connected() {
-    document.getElementById('connect').disabled = true;
-    document.getElementById('loading-btn').style.visibility = 'visible';
 
-    openChat();
-}
+	function connected() {
+	    document.getElementById('connect').disabled = true;
+	    document.getElementById('loading-btn').style.visibility = 'visible';
+
+	    openChat();
+	}
+
 . . .
-function openChat() {
+
+    function openChat() {
 	setTimeout(function() {
 	  	document.getElementById('estaConectado').style.display = 'block';
 	}, 2500);
-}
+    }
 
 ```
+
+#### Adicionando estilização
+- No **index.html**
+```
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+```
+- Importe o arquivo **style.css** para a o subdiretório **style**
+
+## Para testar a aplicação funcionando...
 
 Basta clonar o diretório **'improvedVersion'** e seguir os mesmos passos de configuração acima.
 
