@@ -78,7 +78,7 @@ Agora vamos adicionar algumas funcionalidades, primeiro exibir uma mensagem para
 ```
 
 #### Adicionando estilização
-- No **index.html**
+- Na tag <head></head> do **index.html**
 ```
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
