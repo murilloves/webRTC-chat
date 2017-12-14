@@ -8,25 +8,31 @@ Estas instruções irão fazê-lo rodar o projeto localmente em sua máquina loc
 
 ### Pré-requisitos
 
-Tenha o * [NodeJS](https://nodejs.org/en/) instalado em sua máquina
+i) Tenha o [NodeJS](https://nodejs.org/en/) instalado em sua máquina
 
-Instale também o * [io.js](https://iojs.org/en/index.html)
+ii) Instale também o [io.js](https://iojs.org/en/index.html)
 
-### Testando a versão
+### Configurando a versão
 
-Clone a pasta 'basicVersion'
+1 - Clone a pasta 'basicVersion'
 
-Navegue até o diretório
+2 - Navegue até o diretório
 
-Instale os Node Modules
+3 - Instale os Node Modules
 ```
 npm install
 ```
 
-Instale o Simple Peer
+4 - Instale o Simple Peer
 ```
 npm install simple-peer --save
 ```
+
+5 - Rode a aplicação com ```npm start``` ou ```ng serve```
+
+### Rodando a aplicação
+
+Você precisará abrir duas abas, uma com o link [localhost:9966](localhost:9966) e a outra com [localhost:9966/#init](localhost:9966/#init). Esta última (#init) irá gerar seu ID (Your ID) após aproximadamente 30 segundos, copie-o e cole na outra aba no campo 'Other ID' e clique em 'Connect'. Copie o 'Your ID' desta aba e cole no campo 'Other ID' da aba com link #init.
 
 ## Links úteis
 
