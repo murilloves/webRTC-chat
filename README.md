@@ -36,6 +36,41 @@ Você precisará abrir duas abas, uma com o link **[localhost:9966](localhost:99
 
 ## Melhorando a aplicação
 
+Agora vamos adicionar algumas funcionalidades, primeiro exibir uma mensagem para o usuário quando ele se conectar.
+- No **index.html**
+```
+    <div id="estaConectado" class="col-12 text-center estaConectado">
+      <legend>Você está conectado <i class="fa fa-check text-success" aria-hidden="true"></i></legend>
+    </div>
+```
+- No **index.js**
+```
+	document.getElementById('estaConectado').style.display = 'none';
+. . . 
+document.getElementById('connect').addEventListener('click', function () {
+
+	var otherId = JSON.parse(document.getElementById('otherId').value);
+	peer.signal(otherId);
+
+	connected();
+
+})
+. . .
+function connected() {
+    document.getElementById('connect').disabled = true;
+    document.getElementById('loading-btn').style.visibility = 'visible';
+
+    openChat();
+}
+. . .
+function openChat() {
+	setTimeout(function() {
+	  	document.getElementById('estaConectado').style.display = 'block';
+	}, 2500);
+}
+
+```
+
 Basta clonar o diretório **'improvedVersion'** e seguir os mesmos passos de configuração acima.
 
 ## Links úteis
