@@ -1,0 +1,120 @@
+.basics {
+	font-size: 16px;
+	background-color: #eee;
+	/*font-family: "Trebuchet MS", Helvetica, sans-serif;*/
+}
+
+.login {
+	margin: auto;
+	max-width: 28em;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	background-color: #fff;
+	padding-right: 1em;
+	padding-left: 1em;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	box-shadow: 0px 0px 5px 0px #ccc;
+}
+
+.message-box-father {
+	margin-top: 4em;
+	position: relative;
+}
+
+.message-box-child {
+  position: absolute;
+  bottom: 0;
+}
+
+.btn:active {
+    box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.9) !important;
+    border: rgba(0, 0, 0, 0.3) !important;
+}
+
+.btn-default {
+    background-color: #3F729B !important;
+    border-color: #3F729B !important;
+    color: #fff !important;
+}
+
+.btn-default.active, .btn-default:active, .btn-default:focus, .btn-default:hover, .open .dropdown-toggle.btn-default {
+    background-color: #1F527B !important;
+    border-color: #1F527B !important;
+    color: #fff !important;
+}
+
+.message-field-send {
+	max-width: 62em;
+	margin: auto;
+}
+
+.estaConectado {
+    background-color: #81ff84;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: #333;
+}
+
+.msgsField {
+	height: 600px;
+}
+
+.text-messages {
+    font-family: inherit;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	background-color: #fff;
+	padding-right: 1em;
+	padding-left: 1em;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	max-width: 64em;
+	margin: auto;
+	height: 100%;
+}
+
+.message-field-textarea {
+	border-radius: 0px;
+	border-bottom: 0px;
+}
+
+.outter-div {
+    display: flow-root;
+}
+
+.msg-received {
+    font-size: 1.25em;
+    display: inline-block;
+    float: left;
+    background-color: #eee;
+    color: #000;
+    padding: 0.2em;
+    border-radius: 2em;
+    margin-top: 0.2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+.msg-sent {
+    font-size: 1.25em;
+    display: inline-block;
+    float: right;
+    background-color: #a9ffab;
+    color: #000;
+    padding: 0.2em;
+    border-radius: 2em;
+    margin-top: 0.2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+.hours {
+    color: #888;
+    font-size: 0.6em;
+    font-family: monospace;
+}
