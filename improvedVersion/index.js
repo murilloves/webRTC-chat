@@ -9,20 +9,20 @@
 
 var Peer = require('simple-peer')
 var peer = new Peer({
-  initiator: location.hash === '#init',
-  trickle: false
+	initiator: location.hash === '#init',
+	trickle: false
 })
 
 peer.on('signal', function (data) {
-  document.getElementById('yourId').value = JSON.stringify(data)
+  	document.getElementById('yourId').value = JSON.stringify(data);
 })
 
 document.getElementById('connect').addEventListener('click', function () {
 
-  var otherId = JSON.parse(document.getElementById('otherId').value)
-  peer.signal(otherId)
+	var otherId = JSON.parse(document.getElementById('otherId').value);
+	peer.signal(otherId);
 
-  connected();
+	connected();
 
 })
 
@@ -45,31 +45,31 @@ document.getElementById('send').addEventListener('click', function () {
 })
 
 peer.on('data', function (data) {
-  divAppend(data, false);
+    divAppend(data, false);
 })
 
 function connected() {
-  document.getElementById('connect').disabled = true;
-  document.getElementById('loading-btn').style.visibility = 'visible';
+    document.getElementById('connect').disabled = true;
+    document.getElementById('loading-btn').style.visibility = 'visible';
 
-  openChat();
+    openChat();
 }
 
 function openChat() {
-  setTimeout(function() {
-  	document.getElementById('conectar').style.display = 'none';
-  	document.getElementById('titleMsg').style.display = 'none';
-  	document.getElementById('estaConectado').style.display = 'block';
-  	document.getElementById('msgsField').style.display = 'block';
-  	document.getElementById('msgSend').style.display = 'block';
-  }, 2500);
+	setTimeout(function() {
+	  	document.getElementById('conectar').style.display = 'none';
+	  	document.getElementById('titleMsg').style.display = 'none';
+	  	document.getElementById('estaConectado').style.display = 'block';
+	  	document.getElementById('msgsField').style.display = 'block';
+	  	document.getElementById('msgSend').style.display = 'block';
+	}, 2500);
 }
 
 function wait(ms){
-   var start = new Date().getTime();
-   var end = start;
-   while(end < start + ms) {
-     end = new Date().getTime();
+    var start = new Date().getTime();
+    var end = start;
+    while(end < start + ms) {
+        end = new Date().getTime();
   }
 }
 
@@ -99,7 +99,7 @@ function divAppend(textMessage , isYou) {
 }
 
 function isThereText() {
-  return (document.getElementById('yourMessage').value.trim() === '');
+    return (document.getElementById('yourMessage').value.trim() === '');
 }
 
 function getMsgTime() {
@@ -113,4 +113,3 @@ function getMsgTime() {
 
 
 // Confirmation Handshaking 
-
