@@ -32,7 +32,11 @@ npm install simple-peer --save
 
 ### Rodando a aplicação
 
-Você precisará abrir duas abas, uma com o link **[localhost:9966](localhost:9966)** e a outra com **[localhost:9966/#init](localhost:9966/#init)**. Esta última **(#init)** irá gerar seu ID (Your ID) após aproximadamente 30 segundos, copie-o e cole na outra aba no campo 'Other ID' e clique em 'Connect'. Copie o 'Your ID' desta aba e cole no campo 'Other ID' da aba com link **#init**. Pronto, você já pode trocar mensagens.
+Você precisará abrir duas abas, uma com o link **[localhost:9966](localhost:9966)** e a outra com **[localhost:9966/#init](localhost:9966/#init)**. Esta última **(#init)** irá gerar seu ID (Your ID) após aproximadamente 30 segundos, copie-o e cole na outra aba no campo 'Other ID' e clique em 'Connect'. Nesta aba irá surgir o 'Your ID', copie-o e cole no campo 'Other ID' da aba com link **#init**. Pronto, você já pode trocar mensagens.
+
+## Melhorando a aplicação
+
+Basta clonar o diretório **'improvedVersion'** e seguir os mesmos passos de configuração acima.
 
 ## Links úteis
 
