@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title> Murillo's Cool WebRTC Chat </title>
+  </head>
+  <body class="basics">
+
+    <div id="titleMsg" class="col-12">
+      <legend class="text-center mt-5"> Cool <strong>WebRTC</strong> Chat! </legend>
+    </div>
+
+    <div id="conectar" class="login mt-5">
+
+      <div id="seuId" class="col-12">
+        <label>Aguarde, seu ID aparecerá aqui:</label>
+        <textarea class="col-12 form-control" id="yourId"></textarea>
+      </div>
+
+      <div id="amigoId" class="col-12 mt-2">
+        <label>Insira o ID do seu amigo:</label>
+        <textarea class="col-12 form-control" id="otherId"></textarea>
+      </div>
+
+      <div class="col-12 mt-3">
+        <button class="btn btn-primary btn-block" id="connect">
+          Conectar
+          <i id="loading-btn" class="fa fa-spinner fa-pulse"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="estaConectado" class="col-12 text-center estaConectado">
+      <legend>Você está conectado <i class="fa fa-check text-success" aria-hidden="true"></i></legend>
+    </div>
+
+    <div id="msgsField" class="col-12 mt-3 msgsField">
+      <pre class="text-messages" id="messages"></pre>
+    </div>
+
+    <div id="msgSend" class="message-box-father message-field-send" onkeydown="isThereText()">
+      <div class="message-box-child col-12 mt-3">
+        <!-- <label>Digite sua Mensagem:</label> -->
+        <textarea class="col-12 form-control message-field-textarea" id="yourMessage" placeholder="Digite aqui..."></textarea>
+        <button class="btn btn-block btn-default" id="send"> Enviar </button>
+      </div>
+    </div>
+
+    <script src="bundle.js" charset="utf-8"></script>
+
+  </body>
+</html>
